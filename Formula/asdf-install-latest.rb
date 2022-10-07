@@ -5,21 +5,21 @@
 class AsdfInstallLatest < Formula
   desc "asdf utility to update plugins to their latest version"
   homepage "https://github.com/joaofnds/asdf-install-latest"
-  version "0.0.6"
+  version "0.0.7"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/joaofnds/asdf-install-latest/releases/download/0.0.6/asdf-install-latest_0.0.6_darwin_arm64.tar.gz"
-      sha256 "02f4238a5a58b1e246c8ce5375bc5fb0d8372f9e200ca82cd35c2c33b78a30b2"
+    if Hardware::CPU.intel?
+      url "https://github.com/joaofnds/asdf-install-latest/releases/download/0.0.7/asdf-install-latest_0.0.7_darwin_amd64.tar.gz"
+      sha256 "530bd114d10f01e92c4643b1bf4c143e99cf431d22bfd14f6ee70be43dd6efa3"
 
       def install
         bin.install "asdf-install-latest"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/joaofnds/asdf-install-latest/releases/download/0.0.6/asdf-install-latest_0.0.6_darwin_amd64.tar.gz"
-      sha256 "f7c33209cd0f5f60c895799f83c96d03f6d68bf6e6525f1c6ecdfe01728a3c34"
+    if Hardware::CPU.arm?
+      url "https://github.com/joaofnds/asdf-install-latest/releases/download/0.0.7/asdf-install-latest_0.0.7_darwin_arm64.tar.gz"
+      sha256 "06b064f3e83f7ea20284c69d01b0dac9c3c1403f0b6b9d3aba360b8a5df85cb9"
 
       def install
         bin.install "asdf-install-latest"
@@ -28,17 +28,17 @@ class AsdfInstallLatest < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/joaofnds/asdf-install-latest/releases/download/0.0.6/asdf-install-latest_0.0.6_linux_amd64.tar.gz"
-      sha256 "b054ea249081eecb9d8c3782d0a22a81a10d20ebed83b624d9d00f2ce82e837e"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/joaofnds/asdf-install-latest/releases/download/0.0.7/asdf-install-latest_0.0.7_linux_arm64.tar.gz"
+      sha256 "06c22e9ad8d26acad6cae594986fcc69279d8dbbfd65098bbf94da12c2876cdc"
 
       def install
         bin.install "asdf-install-latest"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/joaofnds/asdf-install-latest/releases/download/0.0.6/asdf-install-latest_0.0.6_linux_arm64.tar.gz"
-      sha256 "8d5aa34a99fea68b6f616d805bb662bc0dc898c90c69dd6f6e3d028dc9cd585c"
+    if Hardware::CPU.intel?
+      url "https://github.com/joaofnds/asdf-install-latest/releases/download/0.0.7/asdf-install-latest_0.0.7_linux_amd64.tar.gz"
+      sha256 "c408cc5c92317cfedccfcf9d647fc6c5706da713b4bdfc96a19eaf28e0eea394"
 
       def install
         bin.install "asdf-install-latest"
