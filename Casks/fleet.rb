@@ -1,5 +1,5 @@
 cask "fleet" do
-  version "1.9.231"
+  version "1.9.237"
 
   app "Fleet.app"
   name "JetBrains Fleet"
@@ -9,17 +9,17 @@ cask "fleet" do
   livecheck do
     url "https://data.services.jetbrains.com/products?code=FL&latest=true&type=preview"
     strategy :page_match do |page|
-      JSON.parse(page)[0]["releases"][0]["version"]
+      JSON.parse(page)[0]["releases"].map { |v| v["version"] }
     end
   end
 
   on_intel do
-    sha256 "11f6b4eb6e1e58134553afb9681734d74618ae9e3efc861b03eae4260506af4d"
+    sha256 "7d37983e2b8a0b7990809d552d3ae66140be07d611088245e70a3832a4b3ee58"
     url "https://download-cdn.jetbrains.com/fleet/installers/macos_x64/Fleet-#{version}.dmg"
   end
 
   on_arm do
-    sha256 "01818acef0d3f6463780096a56efb4c734f22d2e199c18bd4f82fbfd4f770f3c"
+    sha256 "4ae09f430913b03b4c876d99dbdfe6f6680dd9e9d7d58ee3c1b0e990e721d7a5"
     url "https://download-cdn.jetbrains.com/fleet/installers/macos_aarch64/Fleet-#{version}-aarch64.dmg"
   end
 end
