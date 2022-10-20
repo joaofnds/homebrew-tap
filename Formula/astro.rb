@@ -11,7 +11,7 @@ class Astro < Formula
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/joaofnds/astro/releases/download/0.0.10/astro_0.0.10_Darwin_arm64.tar.gz"
-      sha256 "28043490c7903f96d9134bcc8424597b56747dc360a40124a78c4ed2d5faa07c"
+      sha256 "d4470cafc0a9c406830da2cb418120c970c21bf15e7c29cec43e39f1bfdbfa1f"
 
       def install
         bin.install "astro"
@@ -19,7 +19,7 @@ class Astro < Formula
     end
     if Hardware::CPU.intel?
       url "https://github.com/joaofnds/astro/releases/download/0.0.10/astro_0.0.10_Darwin_x86_64.tar.gz"
-      sha256 "1b584e1984fd2604ea1f52892d398cd1566616f700a87ccf58738644f5828363"
+      sha256 "f957d939a6ca8e7037acc9e12d3973cc21209e8b1e76761672379a738dcac6e5"
 
       def install
         bin.install "astro"
@@ -28,17 +28,17 @@ class Astro < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/joaofnds/astro/releases/download/0.0.10/astro_0.0.10_Linux_x86_64.tar.gz"
-      sha256 "c1e9667a7daa9ae279857b2fee4a9bb4c86a4c0029a6b3fac7a0b6f19b5e5831"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/joaofnds/astro/releases/download/0.0.10/astro_0.0.10_Linux_arm64.tar.gz"
+      sha256 "86342787006f9a13bdc6fd36a4e37b13837b455974b09aaf169fb38a980733eb"
 
       def install
         bin.install "astro"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/joaofnds/astro/releases/download/0.0.10/astro_0.0.10_Linux_arm64.tar.gz"
-      sha256 "7d5caf8fd558bb5ffea4287a9abe202b037ef6a996f1cd89d55f9c60e79f8e9c"
+    if Hardware::CPU.intel?
+      url "https://github.com/joaofnds/astro/releases/download/0.0.10/astro_0.0.10_Linux_x86_64.tar.gz"
+      sha256 "f081e321a84209a3af367e688dcbcff4c7442dada327bfdc87a2101379fae113"
 
       def install
         bin.install "astro"
