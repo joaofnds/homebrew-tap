@@ -5,21 +5,21 @@
 class Astro < Formula
   desc "a habit tracker for your terminal with a GitHub style activity graph"
   homepage "https://github.com/joaofnds/astro"
-  version "0.0.7"
+  version "0.0.8"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/joaofnds/astro/releases/download/0.0.7/astro_0.0.7_Darwin_x86_64.tar.gz"
-      sha256 "ed75ecd08789a31dea8494d8a41d66e05b22261857399c6138ca4e0c85d30e1d"
+      url "https://github.com/joaofnds/astro/releases/download/0.0.8/astro_0.0.8_Darwin_x86_64.tar.gz"
+      sha256 "4e5dfbec35e9cc05948f30295458d8599fb3db5623869f7778a02f1475d26212"
 
       def install
         bin.install "astro"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/joaofnds/astro/releases/download/0.0.7/astro_0.0.7_Darwin_arm64.tar.gz"
-      sha256 "3008e603878a2998747002bcdb7cc0933916cd20f000a0d647f0a1562614d646"
+      url "https://github.com/joaofnds/astro/releases/download/0.0.8/astro_0.0.8_Darwin_arm64.tar.gz"
+      sha256 "8e0cc5c0ffc5cb2c3b4ef54efaa4fc1ba23d64b767a2ebd399f6d1835dea26d9"
 
       def install
         bin.install "astro"
@@ -29,16 +29,16 @@ class Astro < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/joaofnds/astro/releases/download/0.0.7/astro_0.0.7_Linux_arm64.tar.gz"
-      sha256 "329e3dd5947f05c0987d18f02a4246ab3005cbe8a434843507392b1a8de6ad96"
+      url "https://github.com/joaofnds/astro/releases/download/0.0.8/astro_0.0.8_Linux_arm64.tar.gz"
+      sha256 "12fe95427c4ecd99ac47c8129a1661acd025bf44e4abdc47d1e4b6091bf62380"
 
       def install
         bin.install "astro"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/joaofnds/astro/releases/download/0.0.7/astro_0.0.7_Linux_x86_64.tar.gz"
-      sha256 "a5e48b5c4b2acb14948841b3d10464c34b6f61d6dab0e78125904433aebd2b39"
+      url "https://github.com/joaofnds/astro/releases/download/0.0.8/astro_0.0.8_Linux_x86_64.tar.gz"
+      sha256 "2e886b3a6611351e91eac106b97807891e6733b69539a74f274a1a5f6a36b101"
 
       def install
         bin.install "astro"
