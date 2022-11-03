@@ -1,5 +1,5 @@
 cask "fleet" do
-  version "1.10.189"
+  version "1.10.192"
 
   app "Fleet.app"
   name "JetBrains Fleet"
@@ -14,12 +14,12 @@ cask "fleet" do
   end
 
   on_intel do
-    sha256 "ff36e9b06d684787f1bea3e25d9ef04076c84b820ed0a3abb909c4787e485555"
+    sha256 "fcbb983eb279c100d95ac7124465bac9acd2a84969b06504c66fb80bb653bb21"
     url "https://download-cdn.jetbrains.com/fleet/installers/macos_x64/Fleet-#{version}.dmg"
   end
 
   on_arm do
-    sha256 "30d3ec5289ca98b4e4610d450ff596dfdaab28c28b13dbfc254b6d33020f46ea"
+    sha256 "78d29195a66c6c33c4f30204dc27a1e904d5ed16b25d6ff9e6e70c4ed70d9eae"
     url "https://download-cdn.jetbrains.com/fleet/installers/macos_aarch64/Fleet-#{version}-aarch64.dmg"
   end
 end
