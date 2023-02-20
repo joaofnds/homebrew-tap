@@ -5,21 +5,21 @@
 class AsdfInstallLatest < Formula
   desc "asdf utility to update plugins to their latest version"
   homepage "https://github.com/joaofnds/asdf-install-latest"
-  version "0.0.10"
+  version "0.0.11"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/joaofnds/asdf-install-latest/releases/download/0.0.10/asdf-install-latest_0.0.10_darwin_amd64.tar.gz"
-      sha256 "2f03bcea9b4d3cd979d9f30fbfe6300556d3fb4ef93b6c88875f53139a02a419"
+      url "https://github.com/joaofnds/asdf-install-latest/releases/download/0.0.11/asdf-install-latest_0.0.11_darwin_amd64.tar.gz"
+      sha256 "555cb9e0f50c584e30c359cffb2c2c77fea7293e571466ce4f6ce5121e57428f"
 
       def install
         bin.install "asdf-install-latest"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/joaofnds/asdf-install-latest/releases/download/0.0.10/asdf-install-latest_0.0.10_darwin_arm64.tar.gz"
-      sha256 "a5a36a6c057f2eedcd1e3c99aefde39089db5c43e58263c1d609f261f226ed8f"
+      url "https://github.com/joaofnds/asdf-install-latest/releases/download/0.0.11/asdf-install-latest_0.0.11_darwin_arm64.tar.gz"
+      sha256 "2ee61d45189ad76e48aaf309c286d3b265685d6b6dc0e9ba0ffb62536b5f8173"
 
       def install
         bin.install "asdf-install-latest"
@@ -29,16 +29,16 @@ class AsdfInstallLatest < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/joaofnds/asdf-install-latest/releases/download/0.0.10/asdf-install-latest_0.0.10_linux_arm64.tar.gz"
-      sha256 "7bdb776c595d87c33efeacdc2373552b7a7a115bbc0834e4685de28039e0720f"
+      url "https://github.com/joaofnds/asdf-install-latest/releases/download/0.0.11/asdf-install-latest_0.0.11_linux_arm64.tar.gz"
+      sha256 "5548f5a65d73f4ff878d469b9fa43fbbcadfc1eabf8fc85ba0f5b71b7127987f"
 
       def install
         bin.install "asdf-install-latest"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/joaofnds/asdf-install-latest/releases/download/0.0.10/asdf-install-latest_0.0.10_linux_amd64.tar.gz"
-      sha256 "7fbd4cada8894e071f109ce06a3deb6cbc54660e504c551fd0adf500cab93302"
+      url "https://github.com/joaofnds/asdf-install-latest/releases/download/0.0.11/asdf-install-latest_0.0.11_linux_amd64.tar.gz"
+      sha256 "7045952d8d11c89449f27aed8b52a95629f11e9cfb8fc1738ed35528cea2da23"
 
       def install
         bin.install "asdf-install-latest"
