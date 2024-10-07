@@ -5,21 +5,21 @@
 class Astro < Formula
   desc "a habit tracker for your terminal with a GitHub style activity graph"
   homepage "https://github.com/joaofnds/astro"
-  version "0.0.35"
+  version "0.0.36"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/joaofnds/astro/releases/download/0.0.35/astro_0.0.35_Darwin_arm64.tar.gz"
-      sha256 "286fd59d0060c8f208f285f1a4c0c7d8592565842ca0b3e4934018e5fa174cdc"
+    on_intel do
+      url "https://github.com/joaofnds/astro/releases/download/0.0.36/astro_0.0.36_darwin_amd64.tar.gz"
+      sha256 "38c4ef02e2dd1466e0710ed16a82c8f5d60ac515742c2a3f3f47431f8153c21a"
 
       def install
         bin.install "astro"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/joaofnds/astro/releases/download/0.0.35/astro_0.0.35_Darwin_x86_64.tar.gz"
-      sha256 "5239cf69f958f5f84f2b37fc2d77a095237053a066340668aaf4e3863c112e46"
+    on_arm do
+      url "https://github.com/joaofnds/astro/releases/download/0.0.36/astro_0.0.36_darwin_arm64.tar.gz"
+      sha256 "5dda3c601e11da051c3d81f86046dd7293e91d1bc95a6e910283f0a520bbaccd"
 
       def install
         bin.install "astro"
@@ -28,20 +28,24 @@ class Astro < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/joaofnds/astro/releases/download/0.0.35/astro_0.0.35_Linux_arm64.tar.gz"
-      sha256 "710684b68d6b4d334a43cbc79b3d9b912f587af12fa713fe698fe2cca7713721"
+    on_intel do
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/joaofnds/astro/releases/download/0.0.36/astro_0.0.36_linux_amd64.tar.gz"
+        sha256 "7bd8ced139462621c0482fb175f910ad0556fc97bb768369d3061f08be1d3077"
 
-      def install
-        bin.install "astro"
+        def install
+          bin.install "astro"
+        end
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/joaofnds/astro/releases/download/0.0.35/astro_0.0.35_Linux_x86_64.tar.gz"
-      sha256 "770a9684f253d4d8d2f81ac081f1231de7d621cfdb2298c6873c20f1c250124d"
+    on_arm do
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/joaofnds/astro/releases/download/0.0.36/astro_0.0.36_linux_arm64.tar.gz"
+        sha256 "1c4f8428848c051be47e4d91e2642e5eab8301bf43613e137baf53c0d494d4f3"
 
-      def install
-        bin.install "astro"
+        def install
+          bin.install "astro"
+        end
       end
     end
   end
