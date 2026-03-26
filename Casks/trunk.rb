@@ -3,11 +3,11 @@ cask "trunk" do
   version "0.10.1"
 
   on_intel do
-    sha256 "b00632e535902d29a9fe9c4f2283c24e37c0e6074994849e97d71c2c4e19499c"
+    sha256 "ba0e552c39cb953d843709a5b0b0767079469953cd11fd9fdf15c9d89559e59d"
     url "https://github.com/joaofnds/trunk/releases/download/v#{version}/trunk_0.10.1_x64.dmg"
   end
   on_arm do
-    sha256 "bd26abd4340a7e2c01a042782c073d5841eae25d1e62f752511cfe506a3e9007"
+    sha256 "c69c065c4e10adf23207d17c5528eca5bb073b98fe87515b135f98337e4246f5"
     url "https://github.com/joaofnds/trunk/releases/download/v#{version}/trunk_0.10.1_aarch64.dmg"
   end
 
