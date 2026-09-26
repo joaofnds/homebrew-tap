@@ -18,9 +18,8 @@ cask "trunk@0.47.3" do
   app "Trunk.app"
   binary "#{appdir}/Trunk.app/Contents/MacOS/trunk"
 
-  postflight do
-    system_command "/usr/bin/xattr",
-                   args: ["-cr", "#{appdir}/Trunk.app"]
+  postflight_steps do
+    run "/usr/bin/xattr", args: ["-cr", "{{appdir}}/Trunk.app"]
   end
 
   zap trash: [
