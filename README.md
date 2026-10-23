@@ -15,4 +15,5 @@ brew install joaofnds/tap/{formula or cask}
 | Repo | Cask | Description |
 | ---- | ---- | ----------- |
 | [astro](https://github.com/joaofnds/astro) | [cask](Casks/astro.rb) | a habit tracker for your terminal with a GitHub style activity graph |
+| [flightdeck](https://github.com/joaofnds/flightdeck) | [cask](Casks/flightdeck.rb) | System monitor that records every second of the machine |
 | [trunk](https://github.com/joaofnds/trunk) | [cask](Casks/trunk.rb) | Desktop Git GUI |
